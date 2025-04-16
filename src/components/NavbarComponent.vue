@@ -11,8 +11,8 @@
                     <button class="btn" @click="toggleTheme()"> 
                         <!-- <span class="" id="moonIcon"><i data-feather='moon' class=""></i></span>
                         <span class="d-none" id="sunIcon"><i data-feather='sun' class=""></i></span> -->
-                        <span v-if="!isDark">Moon</span>
-                        <span v-else>Sun</span>
+                        <span v-if="!isDark"><div v-html="moonIcon"></div></span>
+                        <span v-else><div v-html="sunIcon"></div></span>
                     </button>
                 </div>
             </div>
@@ -22,11 +22,14 @@
 </template>
 
 <script>
+import feather from 'feather-icons'
 export default{
     name: 'NavbarComponent',
     data() {
         return {
-            // Add any data properties you need here
+            sunIcon: feather.icons["sun"].toSvg(),
+            moonIcon: feather.icons["moon"].toSvg(),
+
         };
     },
     props:{
