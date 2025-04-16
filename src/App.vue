@@ -1,6 +1,8 @@
 <template>
   <NavbarComponent @toggleTheme="changeTheme" :isDark="this.isDarkTheme" class="pb-3"></NavbarComponent>
-  <router-view></router-view>
+  <div class="container-fluid">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

@@ -2,8 +2,9 @@
     <header>
         <nav class="navbar bg-dark-subtle">
             <div class="container-fluid">
-                <div class="navbar-brand d-flex align-items-center">    
-                    <h1 class="">Quick Apps</h1>
+                <div class="navbar-brand d-flex align-items-center">   
+                    <img :src="require('@/assets/AppLogo.png')" alt="" width="50px"> 
+                    <h1 class="mx-2">Quick Apps</h1>
                 </div>
                 <div class="nav-item">
 

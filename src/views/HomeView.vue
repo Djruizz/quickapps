@@ -1,6 +1,5 @@
 <template>
-<div class="container-fluid">
-    <div class="row text-center">
+<div class="row text-center">
         <h2>Apps</h2>
     </div>
     <div class="row">
@@ -10,16 +9,16 @@
                 <div class="card-body text-center">
                     
                     <h5 class="card-title">{{route.name}}</h5>
-                    <button class="btn btn-outline-success" @click="launchApp(route.path)">Launch App</button>
+                    <button class="btn btn-outline-success" @click="launchApp(route.path)"><div v-html="playIcon"></div>Launch App </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
 import router from '@/router/index.js';
+import feather from 'feather-icons'
 export default{
     name: 'HomeView',
     components: {
@@ -28,6 +27,7 @@ export default{
     data(){
         return{
             routes: [],
+            playIcon: feather.icons['play'].toSvg()
         }
     }, 
     methods:{
@@ -52,7 +52,12 @@ export default{
     },
     computed:{
         visibleRoutes(){
-            return this.routes.filter(route => route.name !== 'HomeView')
+            return this.routes.filter(route => {
+                return (
+                    route.name !== 'HomeView' &&
+                    route.path.split('/').filter(Boolean).length < 2
+                );
+            });
         }
     }
 }
