@@ -1,15 +1,15 @@
 <template>
     <div class="row aling-items-center p-3 m-2 border rounded" :class="{'bg-secondary editable': isEditing}" v-for="task, index in TaskList" :key="index" @click="editTask(index)">
-        <div class="col-3 d-flex align-items-center">
+        <div class="col-sm-3 d-flex align-items-center justify-content-center mb-2">
             <h5 class="m-0 me-2">{{ index+1 }}</h5>
             <h5 class="m-0">{{ task.taskName }}</h5>
         </div>
 
-        <div class="col d-flex align-items-center">
+        <div class="col-sm d-flex align-items-center justify-content-center mb-2">
             <p class="m-0">{{ task.description }}</p>
         </div>
 
-        <div class="col-3 d-flex align-items-center justify-content-center">
+        <div class="col-sm-3 d-flex align-items-center justify-content-center mb-2">
             <input class="form-check-input m-0" type="checkbox" v-model="task.completed">
         </div>
     </div>

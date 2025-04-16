@@ -5,15 +5,15 @@
                 <h3 class="card-title mt-4">To Do List</h3>
                 <div class="card-body">
                     <div class="row bg-success aling-items-center p-3 m-2 border rounded text-light">
-                        <div class="col-3 d-flex align-items-center justify-content-center">
+                        <div class="col-sm-3 d-flex align-items-center justify-content-center mb-2">
                             <h5 class="m-0">Task</h5>
                             
                         </div>
-                        <div class="col d-flex align-items-center justify-content-center border-start border-end border-2 border-light">
+                        <div class="col-sm d-flex align-items-center justify-content-center border-start border-end border-2 border-light mb-2">
                             <h5 class="m-0">Description</h5>
                             
                         </div>
-                        <div class="col-3 d-flex align-items-center justify-content-center">
+                        <div class="col-sm-3 d-flex align-items-center justify-content-center mb-2">
                             <h5 class="m-0">Completed</h5>
                             
                         </div>
